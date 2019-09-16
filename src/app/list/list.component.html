@@ -1,0 +1,17 @@
+
+<mat-grid-list *ngIf="dogs"  [cols]="breakpoint" rowHeight="2:2" (window:resize)="onResize($event)">
+    <mat-grid-tile   *ngFor ="let dog of dogs" >
+       <mat-card  class="example-card">                      
+            <img mat-card-image [src]="dog.url" alt="Photo of a Shiba Inu">
+              <mat-card-content *ngFor="let breed of dog.breeds">
+                    {{breed.name}}
+              </mat-card-content>
+              <mat-card-actions>
+              <button class="btncolor" layout-align="center center" (click)="OnSelect(dog.id)" mat-button>Know me</button>
+              </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+ 

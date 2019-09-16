@@ -1,0 +1,41 @@
+
+<mat-grid-list  *ngIf="dogs"  [cols]="breakpoint" rowHeight="590px" (window:resize)="onResize($event)"> 
+    <div *ngFor ="let dog of dogs" layout-align="center center"> 
+    <mat-grid-tile  >
+        <mat-card class="example-card">
+            <h1>Details of your dog</h1>
+               <mat-card-title>
+                 <h3>You selected {{dog.name}}! </h3>   
+                </mat-card-title>
+               <mat-card-content>
+                  <div> Bred for: {{dog.bred_for}} </div>
+                  <div> Name:{{ dog.name}} </div>
+                  <div> Temperament: {{ dog.temperament}}</div>   
+                  <div> Life span: {{dog.life_span}}</div> 
+                  <div> Breed group: {{dog.breed_group}} </div>
+                </mat-card-content>
+            <img  src={{img_src}}>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+              <div class="card">
+                  <div class="icon iconfb"></div>
+                  <p class="title">Facebook</p>
+                  <p class="text"> Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="card">
+                <div class="icon iconinst"></div>
+                <p class="title">Instagram</p>
+                <p class="text"> Lorem ipsum dolor sit amet</p>
+               
+          </div>
+          <div class="card">
+              <div class="icon iconwh"></div>
+              <p class="title">WhatsApp</p>
+              <p class="text"> Lorem ipsum dolor sit amet.</p>
+        </div>
+    </mat-grid-tile> 
+  </div>
+  </mat-grid-list>
+  
+  
